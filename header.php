@@ -21,7 +21,9 @@
   <!-- Theme files -->
 	<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700|Nunito:300,400,600,800" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/font_awesome/css/all.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/fontawesome.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/brands.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/solid.min.css">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- Javascript -->
