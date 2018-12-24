@@ -25,7 +25,8 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/brands.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/fonts/css/solid.min.css">
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="<?php bloginfo('stylesheet_directory')?>/assets/js/jquery-3.3.1.min.js" defer></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
   <!-- Javascript -->
 	<script src="<?php bloginfo('stylesheet_directory')?>/assets/js/scripts.js" defer></script>
 

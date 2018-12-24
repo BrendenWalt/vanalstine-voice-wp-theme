@@ -152,7 +152,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
   
   // Buttons
-  .button {
+	.button,
+	input[type="submit"] {
 	border-radius: 50em;
 	cursor: pointer;
 	font-family: $standard;
@@ -164,7 +165,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  top: 2px;
 	}
   }
-  .btn-primary {
+	.btn-primary,
+	input[type="submit"] {
 	background-color: $color-primary;
 	border: 0;
 	-webkit-box-shadow: 5px 7px 0px 0px $color-secondary;
@@ -172,6 +174,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	box-shadow: 5px 7px 0px 0px $color-secondary;
 	color: #ffffff;
 	font-size: 1.5rem;
+	font-weight: 300;
 	padding: 11px 58px;
 	&:hover {
 	  -webkit-box-shadow: 4px 5px 0px 0px $color-secondary;
@@ -192,6 +195,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	-webkit-box-shadow: 5px 5px 0px 0px $color-primary;
 	-moz-box-shadow: 5px 5px 0px 0px $color-primary;
 	box-shadow: 5px 5px 0px 0px $color-primary;
+	font-weight: 300;
 	padding: 11px 58px;
 	&:hover {
 	  -webkit-box-shadow: 3px 3px 0px 0px $color-primary;
@@ -215,6 +219,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	height: 30px;
 	position: fixed;
 	top:35px;
+	left: 35px;
 	margin: 0;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -448,8 +453,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   section.home {
 	align-items: center;
 	background-attachment: fixed;
-	background-color: #737fe9;
-	background-image: url('../images/main-bg.jpg');
+	background-color: rgb(187, 213, 235);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -506,7 +510,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 	.lessons-section {
 	  align-items: center;
-	  background-image: url('../images/category-list-bg.jpg');
 	  background-position: 50% 85%;
 	  background-repeat: no-repeat;
 	  background-size: cover;
@@ -569,10 +572,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   // PHILOSOPHY
   section.philosophy {
 	background-attachment: fixed;
+	background-color: #9EC2DF;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 20% 50%;
-	background-image: url('../images/philosophy-bg.jpg');
 	display: flex;
 	padding-bottom: 35px;
 	h2 {
@@ -634,7 +637,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  .about-container {
 		padding: 25px;
 		h2 {
-		  font-size: 78px;
+			font-size: 78px;
+			line-height: 1em;
 		}
 	  }
 	}
@@ -666,22 +670,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		#sbi_load {
 			display: none; 
 		}
-	//   font-size: 0;
-	//   display: grid;
-	//   grid-template-columns: repeat(2, 1fr);
-	//   div {
-	// 	object-fit: cover;
-	//   }
-	//   img {
-	// 	height: 100%;
-	// 	width: 100%;
-	//   }
 	}
 	@media only screen and (min-width: $bp-med) {
 	//   .instagram-feed {
 	// 	grid-template-columns: repeat(6, 1fr);
 	//   }
-	}
+		}
   }
   
   
@@ -705,6 +699,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			color: $color-text;
 			}
 		}
+		.wpcf7-form p {
+			font-size: 16px;
+			line-height: 26px;
+			margin: 6px 0 10px;
+		}
+		.wpcf7-not-valid-tip {
+			font-size: 12px;
+			line-height: 1em;
+			margin-top: 5px;
+		}
+		.wpcf7-response-output {
+			border: none;
+			color: #777777;
+			font-style: italic;
+			font-size: 14px;
+			line-height: 14px;
+			margin: 1em 0.5em 1em 0;
+			padding-left: 0;
+		}
 	
 		@media only screen and (min-width: $bp-med) {
 			.contact-info {
@@ -718,6 +731,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				vertical-align: top;
 				display: inline-block;
 			}
+			.container {
+				display: flex;
+				justify-content: space-between;
+				padding: 45px 5%;
+			}
+		}
+		@media only screen and (min-width: $bp-lrg) {
 			.container {
 				padding: 45px;
 			}
@@ -755,7 +775,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  display: flex;
 	  flex-direction: column-reverse;
 	  align-items: center;
-	  margin: 0 auto;
+		margin: 0 auto;
+		max-width: 1100px;
 	  justify-content: space-between;
 	  width: 85%;
 	}
