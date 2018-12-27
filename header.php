@@ -9,6 +9,8 @@
  * @package VanAsltine_Voice
  */
 
+$section_01_link_name     = get_field('section_01_link_name');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -38,7 +40,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vanalstine-voice' ); ?></a>
 
 	<header>
-      <a name="home"></a>
+      <a name="<?php echo $section_01_link_name;?>"></a>
       <div class="nav-container">
           
           <div class="nav-burger">

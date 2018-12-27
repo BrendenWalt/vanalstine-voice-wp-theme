@@ -790,7 +790,7 @@ img {
     width: 80%;
   }
 }
-.button, input[type="submit"] {
+.button, input[type="submit"].wpcf7-form-control {
   border-radius: 50em;
   cursor: pointer;
   font-family: 'Nunito', Arial, sans-serif;
@@ -799,7 +799,7 @@ img {
   outline: 0;
   position: relative;
 }
-.button:hover, input[type="submit"]:hover {
+.button:hover, input[type="submit"].wpcf7-form-control:hover {
   top: 2px;
 }
 .btn-primary, input[type="submit"] {
@@ -851,6 +851,7 @@ img {
   height: 30px;
   position: fixed;
   top: 35px;
+  left: 35px;
   margin: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -1296,6 +1297,13 @@ section.contact .wpcf7-form p {
   font-size: 16px;
   line-height: 26px;
   margin: 6px 0 10px;
+}
+section.contact input.wpcf7-form-control.wpcf7-text, section.contact textarea.wpcf7-form-control {
+  border-radius: 7px;
+  color: #676767;
+  font-weight: 300;
+  font-family: 'Nunito', Arial, sans-serif;
+  padding: 6px 10px;
 }
 section.contact .wpcf7-not-valid-tip {
   font-size: 12px;

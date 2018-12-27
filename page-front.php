@@ -13,17 +13,21 @@ $services_text_block_1        = get_field('services_text_area_1');
 $services_text_block_2        = get_field('services_text_area_2');
 $services_button_text         = get_field('services_button_text');
 $services_background_image    = get_field('services_background_image');
+$section_02_link_name         = get_field('section_02_link_name');
 
 $philosophy_section_title     = get_field('philosophy_section_title');
 $philosophy_section_text      = get_field('philosophy_section_text');
 $philosophy_background_image  = get_field('philosophy_background_image');
+$section_03_link_name         = get_field('section_03_link_name');
 
 $about_section_title          = get_field('about_section_title');
 $about_section_text           = get_field('about_section_text');
 $about_section_image          = get_field('about_section_image');
+$section_04_link_name         = get_field('section_04_link_name');
 
 $contact_section_title        = get_field('contact_section_title');
 $contact_fom_shortcode        = get_field('contact_fom_shortcode');
+$section_05_link_name         = get_field('section_05_link_name');
 
 $ig_feed_section_title        = get_field('ig_feed_section_title');
 $instagram_feed_shortcode     = get_field('instagram_feed_shortcode');
@@ -57,7 +61,7 @@ get_header();
 
       <!-- Voice Lessons -->
       <section class="voice-lessons">
-        <a name="lessons"></a>
+        <a name="<?php echo $section_02_link_name; ?>"></a>
         <div class="container">
           <h2>
             <?php echo $services_section_title; ?>
@@ -112,7 +116,7 @@ get_header();
       <?php } else { ?>
         <section class="philosophy">
       <?php } ?>
-        <a name="philosophy"></a>
+        <a name="<?php echo $section_03_link_name; ?>"></a>
         <div class="container">
           <h2>
             <?php echo $philosophy_section_title; ?>
@@ -127,7 +131,7 @@ get_header();
 
       <!-- About -->
       <section class="about-me">
-        <a name="about"></a>
+        <a name="<?php echo $section_04_link_name; ?>"></a>
         <div class="container">
           <div class="headshot">
           <?php if( !empty($about_section_image)) { ?>
@@ -172,7 +176,7 @@ get_header();
 
       <!-- Contact -->
       <section class="contact">
-        <a name="contact"></a>
+        <a name="<?php echo $section_05_link_name ?>"></a>
         <div class="container">
           <div class="contact-info">
             <h2>
