@@ -20,6 +20,9 @@ $philosophy_section_text      = get_field('philosophy_section_text');
 $philosophy_background_image  = get_field('philosophy_background_image');
 $section_03_link_name         = get_field('section_03_link_name');
 
+$testimonial_section_title    = get_field('testimonial_section_title');
+$testimonial_link_name        = get_field('testimonial_link_name;');
+
 $about_section_title          = get_field('about_section_title');
 $about_section_text           = get_field('about_section_text');
 $about_section_image          = get_field('about_section_image');
@@ -53,9 +56,9 @@ get_header();
 				<p>
           <?php echo $intro_text; ?>
 				</p>
-				<button class="button btn-primary">
+				<a href="#<?php echo $section_05_link_name ?>" class="button btn-primary">
 					<?php echo $home_button_text ?>
-				</button>
+				</a>
 				</div>
 			</section><!-- Home -->
 
@@ -104,9 +107,9 @@ get_header();
           <p>
             <?php echo $services_text_block_2; ?>
           </p>
-          <button class="button btn-secondary">
+          <a href="#<?php echo $section_05_link_name ?>" class="button btn-secondary">
             <?php echo $services_button_text ?>
-          </button>
+          </a>
         </div>
       </section><!-- Voice Lessons -->
 
@@ -128,6 +131,15 @@ get_header();
           </div>
         </div>
       </section><!-- Philosophy -->
+
+      <section class="testimonials" id="<?php echo $testimonial_link_name; ?>">
+        <a name="<?php echo $testimonial_link_name; ?>"></a>
+        <div class="container">
+          <h2>
+            <?php echo $testimonial_link_name; ?>
+          </h2>
+        </div>
+      </section>
 
       <!-- About -->
       <section class="about-me">

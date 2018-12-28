@@ -161,10 +161,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-weight: 600;
 	outline: 0;
 	position: relative;
-	&:hover {
-	  top: 2px;
+		&:hover {
+			top: 2px;
+		}
 	}
-  }
+	a.button {
+		display: inline-block;
+		text-decoration: none;
+	}
 	.btn-primary,
 	input[type="submit"] {
 	background-color: $color-primary;
@@ -176,17 +180,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-size: 1.5rem;
 	font-weight: 300;
 	padding: 11px 58px;
-	&:hover {
-	  -webkit-box-shadow: 4px 5px 0px 0px $color-secondary;
-	  -moz-box-shadow: 4px 5px 0px 0px $color-secondary;
-	  box-shadow: 4px 5px 0px 0px $color-secondary;
-	}
-	&:active {
-	  top: 7px;
-	  -webkit-box-shadow: 0px 0px 0px 0px $color-secondary;
-	  -moz-box-shadow: 0px 0px 0px 0px $color-secondary;
-	  box-shadow: 0px 0px 0px 0px $color-secondary;
-	}
+		&:hover {
+			-webkit-box-shadow: 4px 5px 0px 0px $color-secondary;
+			-moz-box-shadow: 4px 5px 0px 0px $color-secondary;
+			box-shadow: 4px 5px 0px 0px $color-secondary;
+		}
+		&:visited {
+			color: #ffffff;
+		}
+		&:active {
+			top: 7px;
+			-webkit-box-shadow: 0px 0px 0px 0px $color-secondary;
+			-moz-box-shadow: 0px 0px 0px 0px $color-secondary;
+			box-shadow: 0px 0px 0px 0px $color-secondary;
+		}
   }
   .btn-secondary {
 	background-color: #ffffff;
@@ -197,18 +204,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	box-shadow: 5px 5px 0px 0px $color-primary;
 	font-weight: 300;
 	padding: 11px 58px;
-	&:hover {
-	  -webkit-box-shadow: 3px 3px 0px 0px $color-primary;
-	  -moz-box-shadow: 3px 3px 0px 0px $color-primary;
-		box-shadow: 3px 3px 0px 0px $color-primary;
-		border: 3px solid $color-primary;
-	}
-	&:active {
-	  top: 5px;
-	  -webkit-box-shadow: 0px 0px 0px 0px $color-primary;
-	  -moz-box-shadow: 0px 0px 0px 0px $color-primary;
-	  box-shadow: 0px 0px 0px 0px $color-primary;
-	}
+		&:hover {
+			-webkit-box-shadow: 3px 3px 0px 0px $color-primary;
+			-moz-box-shadow: 3px 3px 0px 0px $color-primary;
+			box-shadow: 3px 3px 0px 0px $color-primary;
+			border: 3px solid $color-primary;
+		}
+		&:active {
+			top: 5px;
+			-webkit-box-shadow: 0px 0px 0px 0px $color-primary;
+			-moz-box-shadow: 0px 0px 0px 0px $color-primary;
+			box-shadow: 0px 0px 0px 0px $color-primary;
+		}
+		&:visited {
+			color: $color-text;
+		}
   }
   
   
@@ -457,15 +467,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
-	.button {
-	  display: block;
-	  margin: 0 auto;
+	.button:hover,
+	.button:active {
+		color: #ffffff;
 	}
 	.container {
 	  background-color: $whitebg;
 	  margin: 260px auto 45px;
 	  padding: 45px 20px;
-	  max-width: 800px;
+		max-width: 800px;
+		text-align: center;
 	  width: 92%; 
 	}
 	p {
@@ -577,31 +588,36 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-position: 20% 50%;
 	display: flex;
 	padding-bottom: 35px;
-	h2 {
-	  color: #ffffff;
-	  text-align: center;
-	  padding: 25px 0;
+		h2 {
+			color: #ffffff;
+			text-align: center;
+			padding: 25px 0;
+		}
+		.text-container {
+			background-color: $whitebg;
+			padding: 45px 4%;
+			p {
+			margin: 0 auto;
+			max-width: 1000px;
+			text-align: center;
+			}
+		}
+		@media only screen and (min-width: $bp-med) {
+			min-height: 55vh;
+			padding-bottom: 60px;
+			.text-container {
+			padding: 45px;
+			}
+		}
+		@media only screen and (min-width: $bp-lrg) {
+			background-position: 50% 50;
+		}
 	}
-	.text-container {
-	  background-color: $whitebg;
-	  padding: 45px 4%;
-	  p {
-		margin: 0 auto;
-		max-width: 1000px;
-		text-align: center;
-	  }
+	
+	// TESTIMONIALS
+	section.testimonials {
+		padding: 45px 0;
 	}
-	@media only screen and (min-width: $bp-med) {
-	  min-height: 55vh;
-	  padding-bottom: 60px;
-	  .text-container {
-		padding: 45px;
-	  }
-	}
-	@media only screen and (min-width: $bp-lrg) {
-	  background-position: 50% 50;
-	}
-  }
   
   // About
   section.about-me {

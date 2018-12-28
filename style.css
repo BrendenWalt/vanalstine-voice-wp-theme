@@ -802,6 +802,10 @@ img {
 .button:hover, input[type="submit"].wpcf7-form-control:hover {
   top: 2px;
 }
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
 .btn-primary, input[type="submit"] {
   background-color: #9ec2df;
   border: 0;
@@ -817,6 +821,9 @@ img {
   -webkit-box-shadow: 4px 5px 0px 0px #f3ca40;
   -moz-box-shadow: 4px 5px 0px 0px #f3ca40;
   box-shadow: 4px 5px 0px 0px #f3ca40;
+}
+.btn-primary:visited, input[type="submit"]:visited {
+  color: #fff;
 }
 .btn-primary:active, input[type="submit"]:active {
   top: 7px;
@@ -845,6 +852,9 @@ img {
   -webkit-box-shadow: 0px 0px 0px 0px #9ec2df;
   -moz-box-shadow: 0px 0px 0px 0px #9ec2df;
   box-shadow: 0px 0px 0px 0px #9ec2df;
+}
+.btn-secondary:visited {
+  color: #676767;
 }
 .nav-burger {
   width: 40px;
@@ -1069,15 +1079,15 @@ section.home {
   background-size: cover;
   display: flex;
 }
-section.home .button {
-  display: block;
-  margin: 0 auto;
+section.home .button:hover, section.home .button:active {
+  color: #fff;
 }
 section.home .container {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 260px auto 45px;
   padding: 45px 20px;
   max-width: 800px;
+  text-align: center;
   width: 92%;
 }
 section.home p {
@@ -1216,6 +1226,9 @@ section.philosophy .text-container p {
   section.philosophy {
     background-position: 50% 50;
   }
+}
+section.testimonials {
+  padding: 45px 0;
 }
 section.about-me {
   background-color: #f5f5f5;
