@@ -9,7 +9,6 @@ $(document).ready(function() {
     var documentVar = $(document);
 
 
-                
     $('section[data-type="background"]').each(function(){
       var $bgobj = $(this); // assigning the object
       windowVar.scroll(function(){
@@ -44,6 +43,13 @@ $(document).ready(function() {
       menuList.removeClass('open');
     }
 
+    var onOpenMenuScroll = function() {
+      if(menuList.hasClass('open') && (scrollY > screen.height*.3)) {
+        menuIcon.removeClass('open');
+        menuList.removeClass('open');
+      }
+    }
+
     var onEscapeClick = function(e) {
       var key = e.key || e.keyCode;
       if(key === "Escape") {
@@ -57,6 +63,7 @@ $(document).ready(function() {
     }
 
     var onPageScroll = function() {
+      onOpenMenuScroll();
       var stickyHeight = screen.height*.3;
       if (scrollY > (stickyHeight)) {
         toTop.fadeIn(300);
@@ -65,6 +72,7 @@ $(document).ready(function() {
         toTop.fadeOut(300);
         burgerPatties.removeClass('drop-shadow');
       }
+
     }
 
     var onToTopClick = function(e) {
