@@ -7,30 +7,31 @@
 $intro_text                   = get_field('intro_text');
 $home_button_text             = get_field('home_button_text');
 $home_background_image        = get_field('home_background_image');
+$home_section_link_name       = get_field('home_section_link_name');
 
 $services_section_title       = get_field('services_section_title');
 $services_text_block_1        = get_field('services_text_area_1');
 $services_text_block_2        = get_field('services_text_area_2');
 $services_button_text         = get_field('services_button_text');
 $services_background_image    = get_field('services_background_image');
-$section_02_link_name         = get_field('section_02_link_name');
+$lessons_section_link_name    = get_field('lessons_section_link_name');
 
 $philosophy_section_title     = get_field('philosophy_section_title');
 $philosophy_section_text      = get_field('philosophy_section_text');
 $philosophy_background_image  = get_field('philosophy_background_image');
-$section_03_link_name         = get_field('section_03_link_name');
+$philosophy_section_link_name = get_field('philosophy_section_link_name');
 
 $testimonial_section_title    = get_field('testimonial_section_title');
-$testimonial_link_name        = get_field('testimonial_link_name');
+$testimonial_section_link_name= get_field('testimonial_section_link_name');
 
 $about_section_title          = get_field('about_section_title');
 $about_section_text           = get_field('about_section_text');
 $about_section_image          = get_field('about_section_image');
-$section_04_link_name         = get_field('section_04_link_name');
+$about_section_link_name      = get_field('about_section_link_name');
 
 $contact_section_title        = get_field('contact_section_title');
 $contact_fom_shortcode        = get_field('contact_fom_shortcode');
-$section_05_link_name         = get_field('section_05_link_name');
+$contact_section_link_name    = get_field('contact_section_link_name');
 
 $ig_feed_section_title        = get_field('ig_feed_section_title');
 $instagram_feed_shortcode     = get_field('instagram_feed_shortcode');
@@ -46,9 +47,9 @@ get_header();
 
 			<!-- Home -->
       <?php if ( !empty($home_background_image)) { ?>
-        <section class="home" data-type="background" data-speed="10" style="background-image: url('<?php echo $home_background_image['url']; ?>');">
+        <section class="home" id="<?php echo $home_section_link_name; ?>" data-type="background" data-speed="10" style="background-image: url('<?php echo $home_background_image['url']; ?>');">
       <?php } else { ?>
-        <section class="home">
+        <section class="home" id="<?php echo $home_section_link_name; ?>">
       <?php } ?>
 			
 			
@@ -56,7 +57,7 @@ get_header();
 				<p>
           <?php echo $intro_text; ?>
 				</p>
-				<a href="#<?php echo $section_05_link_name ?>" class="button btn-primary">
+				<a href="#<?php echo $contact_section_link_name ?>" class="button btn-primary">
 					<?php echo $home_button_text ?>
         </a>
         <?php 
@@ -87,8 +88,8 @@ get_header();
 			</section><!-- Home -->
 
       <!-- Voice Lessons -->
-      <section class="voice-lessons">
-        <a name="<?php echo $section_02_link_name; ?>"></a>
+      <section class="voice-lessons" id="<?php echo $lessons_section_link_name; ?>">
+        <a name="<?php echo $lessons_section_link_name; ?>"></a>
         <div class="container">
           <h2>
             <?php echo $services_section_title; ?>
@@ -131,7 +132,7 @@ get_header();
           <p>
             <?php echo $services_text_block_2; ?>
           </p>
-          <a href="#<?php echo $section_05_link_name ?>" class="button btn-secondary">
+          <a href="#<?php echo $contact_section_link_name ?>" class="button btn-secondary">
             <?php echo $services_button_text ?>
           </a>
         </div>
@@ -141,9 +142,9 @@ get_header();
       <?php if ( !empty($home_background_image)) { ?>
         <section class="philosophy" style="background-image: url('<?php echo $philosophy_background_image['url']; ?>');">
       <?php } else { ?>
-        <section class="philosophy">
+        <section class="philosophy" id="<?php echo $philosophy_section_link_name; ?>">
       <?php } ?>
-        <a name="<?php echo $section_03_link_name; ?>"></a>
+        <a name="<?php echo $philosophy_section_link_name; ?>"></a>
         <div class="container">
           <h2>
             <?php echo $philosophy_section_title; ?>
@@ -157,8 +158,8 @@ get_header();
       </section><!-- Philosophy -->
       
       <!-- Testimonials -->
-      <section class="testimonials" id="<?php echo $testimonial_link_name; ?>" style="background-image:url('<?php bloginfo('stylesheet_directory');?>/assets/images/bw-testimonial-bg.svg')">
-        <a name="<?php echo $testimonial_link_name; ?>"></a>
+      <section class="testimonials" id="<?php echo $testimonial_section_link_name; ?>" style="background-image:url('<?php bloginfo('stylesheet_directory');?>/assets/images/bw-testimonial-bg.svg')">
+        <a name="<?php echo $testimonial_section_link_name; ?>"></a>
         <div class="container">
           <h2>
             <?php echo $testimonial_section_title; ?>
@@ -198,8 +199,8 @@ get_header();
       </section>
 
       <!-- About -->
-      <section class="about-me">
-        <a name="<?php echo $section_04_link_name; ?>"></a>
+      <section class="about-me" id="<?php echo $about_section_link_name; ?>">
+        <a name="<?php echo $about_section_link_name; ?>"></a>
         <div class="container">
           <div class="headshot">
           <?php if( !empty($about_section_image)) { ?>
@@ -226,7 +227,7 @@ get_header();
       </section><!-- About -->
 
       <!-- Instagram Feed -->
-      <section class="social-feed">
+      <section class="social-feed" id="follow-on-instagram">
         <h2>
           <?php echo $ig_feed_section_title; ?>
         </h2>
@@ -243,8 +244,8 @@ get_header();
       </section><!-- Instagram Feed -->
 
       <!-- Contact -->
-      <section class="contact">
-        <a name="<?php echo $section_05_link_name ?>"></a>
+      <section class="contact" id="<?php echo $contact_section_link_name ?>">
+        <a name="<?php echo $contact_section_link_name ?>"></a>
         <div class="container">
           <div class="contact-info">
             <h2>

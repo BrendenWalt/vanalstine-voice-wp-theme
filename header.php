@@ -9,7 +9,7 @@
  * @package VanAsltine_Voice
  */
 
-$section_01_link_name     = get_field('section_01_link_name');
+$home_section_link_name     = get_field('home_section_link_name');
 $instagram_url                = get_field('instagram_url');
 $facebook_url                 = get_field('facebook_url');
 
@@ -42,7 +42,7 @@ $facebook_url                 = get_field('facebook_url');
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vanalstine-voice' ); ?></a>
 
 	<header>
-      <a name="<?php echo $section_01_link_name;?>"></a>
+      <a name="<?php echo $home_section_link_name;?>"></a>
       <div class="nav-container">
           
           <div class="nav-burger">
