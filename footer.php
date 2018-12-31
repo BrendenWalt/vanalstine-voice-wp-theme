@@ -8,7 +8,8 @@
  *
  * @package VanAsltine_Voice
  */
-
+$instagram_url                = get_field('instagram_url');
+$facebook_url                 = get_field('facebook_url');
 ?>
 
 	</div><!-- #content -->
@@ -21,13 +22,13 @@
       <div class="footer-info">
         &copy;2018 VanAlstine Voice. All Rights Reserved
       </div>
-      <div class="footer-info footer-social">
-        <i class="fab fa-facebook-f">
-          <a href="http://link"></a>
-        </i>
-        <i class="fab fa-instagram">
-          <a href="http://link"></a>
-        </i>
+      <div class="footer-info footer-social social">
+        <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
   </footer>

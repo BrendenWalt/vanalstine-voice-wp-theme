@@ -219,7 +219,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		&:visited {
 			color: $color-text;
 		}
-  }
+	}
+	.social a {
+		text-decoration: none;
+		&:visited {
+			color: #ffffff;
+		}
+	}
   
   
   // Nav Styles
@@ -315,7 +321,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	top: 18px;
 	width: 0%;
 	left: 50%;
-  }
+	}
+	
   
   // Menu Style
   .menu-main-menu-container {
@@ -495,7 +502,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		line-height: 18px;
 		margin-top: 40px;
 		blockquote {
-			margin: 0 0 0 10em;
+			margin: 0 0 0 5em;
 		}
 		.cite {
 			text-align:right;
@@ -510,7 +517,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  min-height: 60vh;
 	  p {
 		line-height: 1.5em;
-	  }
+		}
+		.featured-testimonial blockquote {
+			margin-left: 10em;
+		}
 	}
 	@media only screen and (min-width: $bp-med) and (orientation: landscape) {
 	  height: 90vh;
@@ -638,34 +648,63 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	// TESTIMONIALS
 	section.testimonials {
 		padding: 45px 0;
+		blockquote {
+			color: $color-text;
+			font-family: $standard;
+			font-style: italic;
+		}
 		h2 {
 			text-align: center;
 		}
+		.container {
+			text-align: center;
+		}
 		.testimonial-container {
-			border: 1px solid $color-text;
+			border: 1px solid $color-primary;
 			margin: 20px auto;
 			padding: 15px 0px;
-		}
-		blockquote {
-			// margin: 0;
+			text-align: left;
+			-webkit-box-shadow: 5px 7px 0px 0px $color-primary;
+			-moz-box-shadow: 5px 7px 0px 0px $color-primary;
+			box-shadow: 5px 7px 0px 0px $color-primary;
 		}
 		p.cite {
 			text-align: right;
+			font-size: 0.8em;
+			font-style: normal;
+			font-weight: 600;
+		}
+		.quotation-mark {
+			// font-size: 1.5em;
+			// line-height: 1em;
 		}
 		@media only screen and (min-width: $bp-med) {
 			.testimonial-container {
-				width: 75%;
+				width: 85%;
 				min-width: 500px;
+				
 				&:nth-child(even) {
+					border: 1px solid $color-secondary;
 					margin-left: auto;
 					margin-right: 0;
+					-webkit-box-shadow: 5px 7px 0px 0px $color-secondary;
+					-moz-box-shadow: 5px 7px 0px 0px $color-secondary;
+					box-shadow: 5px 7px 0px 0px $color-secondary;
 				}
 				&:nth-child(odd) {
 					margin-left: 0;
 					margin-right: auto;
 				}
+				
 			}
 			
+		}
+		@media only screen and (min-width: $bp-lrg) {
+			.testimonial-container {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				width: 75%;
+			}
 		}
 	}
   
@@ -860,7 +899,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  padding-bottom: 15px;
 	  color: #ffffff;
 	}
-	i {
+	.social.footer-social i{
 	  cursor: pointer;
 	  font-size: 22px;
 	  margin: 0 8px;

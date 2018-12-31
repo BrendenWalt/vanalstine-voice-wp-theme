@@ -117,7 +117,7 @@ get_header();
               $loop = new WP_Query( array(
                 'post_type'  => 'voice_category',
                 'orderby'    => 'post_id',
-                'order'      => 'DESC'       
+                'order'      => 'DESC',      
               ));
 
               while( $loop->have_posts() ) : $loop->the_post();
@@ -163,13 +163,20 @@ get_header();
           <h2>
             <?php echo $testimonial_section_title; ?>
           </h2>
-          <p><?php echo $test; ?></p>
+          <div class="vv-divider">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
 
           <?php 
             $testimonial_loop = new WP_Query( array(
               'post_type' => 'testimonial',
               'orderby'   => 'post_id',
               'order'     => 'DESC',
+              'posts_per_page' => '6',
               'meta_query' => array(
                 array(
                   'key' => 'deactivate',
@@ -182,7 +189,7 @@ get_header();
           ?>
             <div class="testimonial-container">
               <blockquote>
-                <?php the_field(testimonial) ?>
+                <span class="quotation-mark"></span><?php the_field(testimonial) ?><span class="quotation-mark"></span>
                 <p class="cite">- <?php the_field(testimonial_contributor) ?></p>
               </blockquote>
             </div>

@@ -856,6 +856,12 @@ a.button {
 .btn-secondary:visited {
   color: #676767;
 }
+.social a {
+  text-decoration: none;
+}
+.social a:visited {
+  color: #fff;
+}
 .nav-burger {
   width: 40px;
   height: 30px;
@@ -1083,7 +1089,7 @@ section.home .button:hover, section.home .button:active {
   color: #fff;
 }
 section.home .container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   margin: 260px auto 45px;
   padding: 45px 20px 15px;
   max-width: 800px;
@@ -1107,7 +1113,7 @@ section.home .featured-testimonial {
   margin-top: 40px;
 }
 section.home .featured-testimonial blockquote {
-  margin: 0 0 0 10em;
+  margin: 0 0 0 5em;
 }
 section.home .featured-testimonial .cite {
   text-align: right;
@@ -1123,6 +1129,9 @@ section.home .featured-testimonial .cite {
   }
   section.home p {
     line-height: 1.5em;
+  }
+  section.home .featured-testimonial blockquote {
+    margin-left: 10em;
   }
 }
 @media only screen and (min-width: 750px) and (orientation: landscape) {
@@ -1226,7 +1235,7 @@ section.philosophy h2 {
   padding: 25px 0;
 }
 section.philosophy .text-container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 45px 4%;
 }
 section.philosophy .text-container p {
@@ -1251,29 +1260,55 @@ section.philosophy .text-container p {
 section.testimonials {
   padding: 45px 0;
 }
+section.testimonials blockquote {
+  color: #676767;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-style: italic;
+}
 section.testimonials h2 {
   text-align: center;
 }
+section.testimonials .container {
+  text-align: center;
+}
 section.testimonials .testimonial-container {
-  border: 1px solid #676767;
+  border: 1px solid #9ec2df;
   margin: 20px auto;
   padding: 15px 0px;
+  text-align: left;
+  -webkit-box-shadow: 5px 7px 0px 0px #9ec2df;
+  -moz-box-shadow: 5px 7px 0px 0px #9ec2df;
+  box-shadow: 5px 7px 0px 0px #9ec2df;
 }
 section.testimonials p.cite {
   text-align: right;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 600;
 }
 @media only screen and (min-width: 750px) {
   section.testimonials .testimonial-container {
-    width: 75%;
+    width: 85%;
     min-width: 500px;
   }
   section.testimonials .testimonial-container:nth-child(even) {
+    border: 1px solid #f3ca40;
     margin-left: auto;
     margin-right: 0;
+    -webkit-box-shadow: 5px 7px 0px 0px #f3ca40;
+    -moz-box-shadow: 5px 7px 0px 0px #f3ca40;
+    box-shadow: 5px 7px 0px 0px #f3ca40;
   }
   section.testimonials .testimonial-container:nth-child(odd) {
     margin-left: 0;
     margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  section.testimonials .testimonial-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 75%;
   }
 }
 section.about-me {
@@ -1343,7 +1378,7 @@ section.contact {
   padding: 45px 0;
 }
 section.contact .container {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   padding: 45px 3%;
 }
 section.contact .contact-info, section.contact .contact-form {
@@ -1443,13 +1478,13 @@ footer .footer-info {
   padding-bottom: 15px;
   color: #fff;
 }
-footer i {
+footer .social.footer-social i {
   cursor: pointer;
   font-size: 22px;
   margin: 0 8px;
   transition: color 0.3s ease;
 }
-footer i:hover {
+footer .social.footer-social i:hover {
   color: #9ec2df;
 }
 @media only screen and (min-width: 750px) {

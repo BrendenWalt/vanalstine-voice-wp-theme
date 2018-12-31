@@ -10,6 +10,8 @@
  */
 
 $section_01_link_name     = get_field('section_01_link_name');
+$instagram_url                = get_field('instagram_url');
+$facebook_url                 = get_field('facebook_url');
 
 ?>
 <!doctype html>
@@ -69,8 +71,12 @@ $section_01_link_name     = get_field('section_01_link_name');
         <img src="../images/vv-logo-alt-v2.png" alt="">
       </div>
       <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
+        <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </header>
 
