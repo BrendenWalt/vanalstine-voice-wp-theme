@@ -641,6 +641,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		h2 {
 			text-align: center;
 		}
+		.testimonial-container {
+			border: 1px solid $color-text;
+			margin: 20px auto;
+			padding: 15px 0px;
+		}
+		blockquote {
+			// margin: 0;
+		}
+		p.cite {
+			text-align: right;
+		}
+		@media only screen and (min-width: $bp-med) {
+			.testimonial-container {
+				width: 75%;
+				min-width: 500px;
+				&:nth-child(even) {
+					margin-left: auto;
+					margin-right: 0;
+				}
+				&:nth-child(odd) {
+					margin-left: 0;
+					margin-right: auto;
+				}
+			}
+			
+		}
 	}
   
   // About

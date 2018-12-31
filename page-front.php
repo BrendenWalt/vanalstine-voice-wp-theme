@@ -59,12 +59,30 @@ get_header();
 				<a href="#<?php echo $section_05_link_name ?>" class="button btn-primary">
 					<?php echo $home_button_text ?>
         </a>
-        <div class="featured-testimonial">
-          <blockquote>
-            "I loved working with Stephanie! She helped me regain my confidence as a singer after taking a break from musical theater."
-            <p class="cite">- Julianne W.</p>
-          </blockquote>
-        </div>
+        <?php 
+          $testimonial_loop = new WP_Query( array(
+            'post_type' => 'testimonial',
+            'orderby'   => 'post_id',
+            'order'     => 'DESC',
+            'posts_per_page' => '1',
+            'meta_query' => array(
+              array(
+                'key' => 'featured_option',
+			          'compare' => '=',
+		  	        'value' => '1'
+              )
+            )
+          ));
+         while($testimonial_loop->have_posts()) : $testimonial_loop->the_post();
+        ?>
+          <div class="featured-testimonial">
+            <blockquote>
+              <?php the_field(testimonial) ?>
+              <p class="cite">- <?php the_field(testimonial_contributor) ?></p>
+            </blockquote>
+          </div>
+        <?php endwhile; ?>
+        
 				</div>
 			</section><!-- Home -->
 
@@ -137,7 +155,7 @@ get_header();
           </div>
         </div>
       </section><!-- Philosophy -->
-
+      
       <!-- Testimonials -->
       <section class="testimonials" id="<?php echo $testimonial_link_name; ?>">
         <a name="<?php echo $testimonial_link_name; ?>"></a>
@@ -145,6 +163,30 @@ get_header();
           <h2>
             <?php echo $testimonial_section_title; ?>
           </h2>
+          <p><?php echo $test; ?></p>
+
+          <?php 
+            $testimonial_loop = new WP_Query( array(
+              'post_type' => 'testimonial',
+              'orderby'   => 'post_id',
+              'order'     => 'DESC',
+              'meta_query' => array(
+                array(
+                  'key' => 'deactivate',
+                  'compare' => '=',
+                  'value' => '0'
+                )
+              )
+            ));
+          while($testimonial_loop->have_posts()) : $testimonial_loop->the_post();
+          ?>
+            <div class="testimonial-container">
+              <blockquote>
+                <?php the_field(testimonial) ?>
+                <p class="cite">- <?php the_field(testimonial_contributor) ?></p>
+              </blockquote>
+            </div>
+          <?php endwhile; ?>
         </div>
       </section>
 
