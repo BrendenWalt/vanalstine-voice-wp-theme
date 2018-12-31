@@ -648,6 +648,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	// TESTIMONIALS
 	section.testimonials {
 		padding: 45px 0;
+		background-repeat: repeat;
+		background-attachment: fixed; 
 		blockquote {
 			color: $color-text;
 			font-family: $standard;
@@ -660,6 +662,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			text-align: center;
 		}
 		.testimonial-container {
+			background-color: #ffffff;
 			border: 1px solid $color-primary;
 			margin: 20px auto;
 			padding: 15px 0px;
@@ -682,6 +685,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			.testimonial-container {
 				width: 85%;
 				min-width: 500px;
+				
 				
 				&:nth-child(even) {
 					border: 1px solid $color-secondary;
@@ -864,6 +868,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-radius: 8px;
 	display: none;
 	bottom: 78px;
+	height: 50px;
+	width: 50px;
 	-webkit-box-shadow: 2px 3px 0px 0px $color-secondary;
 	-moz-box-shadow: 2px 3px 0px 0px $color-secondary;
 	box-shadow: 2px 3px 0px 0px $color-secondary;
@@ -871,7 +877,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  color: #ffffff;
 	  display: block;
 	  font-size: 25px;
-	  padding: 13px 8px;
+		padding: 12px 15px;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 	@media only screen and (min-width: $bp-med) {
 	  bottom: 28px;

@@ -157,7 +157,7 @@ get_header();
       </section><!-- Philosophy -->
       
       <!-- Testimonials -->
-      <section class="testimonials" id="<?php echo $testimonial_link_name; ?>">
+      <section class="testimonials" id="<?php echo $testimonial_link_name; ?>" style="background-image:url('<?php bloginfo('stylesheet_directory');?>/assets/images/bw-testimonial-bg.svg')">
         <a name="<?php echo $testimonial_link_name; ?>"></a>
         <div class="container">
           <h2>
@@ -258,12 +258,12 @@ get_header();
               <div></div>
             </div>
             <div class="social">
-              <i class="fab fa-facebook-f">
-                <a href="<?php echo $facebook_url; ?>"></a>
-              </i>
-              <i class="fab fa-instagram">
-                <a href="<?php echo $instagram_url; ?>"></a>
-              </i>
+              <a href="https://www.facebook.com/<?php echo $facebook_url; ?>">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/<?php echo $instagram_url; ?>">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
           <div class="contact-form">
