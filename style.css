@@ -1049,7 +1049,8 @@ header a[name="home"] {
   display: none;
 }
 header .logo {
-  max-width: 195px;
+  min-width: 250px;
+  max-width: 509px;
   width: 50%;
 }
 header .nav-container, header .social {
@@ -1131,7 +1132,7 @@ section.home .featured-testimonial .cite {
     line-height: 1.5em;
   }
   section.home .featured-testimonial blockquote {
-    margin-left: 10em;
+    margin-left: 13em;
   }
 }
 @media only screen and (min-width: 750px) and (orientation: landscape) {
@@ -1455,7 +1456,7 @@ section.contact .wpcf7-response-output {
   color: #fff;
   display: block;
   font-size: 25px;
-  padding: 13px 14px;
+  padding: 12px 15px;
 }
 #to-top i:hover {
   cursor: pointer;
@@ -1473,11 +1474,26 @@ footer {
 footer .container {
   display: flex;
   flex-direction: column-reverse;
+  font-size: 10px;
   align-items: center;
   margin: 0 auto;
   max-width: 1100px;
   justify-content: space-between;
   width: 85%;
+}
+footer .contact-email {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+footer .contact-email a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .contact-email a:hover {
+  color: #f3ca40;
 }
 footer .footer-info {
   font-family: 'Nunito', Arial, sans-serif;

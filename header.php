@@ -68,7 +68,7 @@ $facebook_url                 = get_field('facebook_url');
       </div>
       
       <div class="logo">
-        <img src="../images/vv-logo-alt-v2.png" alt="">
+        <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/vv-website-logo.png" alt="VanAlstine Voice">
       </div>
       <div class="social">
         <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">

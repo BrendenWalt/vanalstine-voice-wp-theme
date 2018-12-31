@@ -434,7 +434,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  display: none;
 	}
 	.logo {
-	  max-width: 195px;
+		min-width: 250px;
+	  max-width: 509px;
 	  width: 50%;
 	}
 	.nav-container,
@@ -519,7 +520,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		line-height: 1.5em;
 		}
 		.featured-testimonial blockquote {
-			margin-left: 10em;
+			margin-left: 13em;
 		}
 	}
 	@media only screen and (min-width: $bp-med) and (orientation: landscape) {
@@ -894,12 +895,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	position: relative;
 	.container {
 	  display: flex;
-	  flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		font-size: 10px;
 	  align-items: center;
 		margin: 0 auto;
 		max-width: 1100px;
 	  justify-content: space-between;
 	  width: 85%;
+	}
+	.contact-email {
+		font-family: $standard;
+		font-size: 14px;
+		color: #ffffff;
+		text-align: center;
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $color-secondary;
+			}
+		}
 	}
 	.footer-info {
 	  font-family: $standard;
