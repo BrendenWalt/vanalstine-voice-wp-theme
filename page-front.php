@@ -259,10 +259,10 @@ get_header();
               <div></div>
             </div>
             <div class="social">
-              <a href="https://www.facebook.com/<?php echo $facebook_url; ?>">
+              <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="https://www.instagram.com/<?php echo $instagram_url; ?>">
+              <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
