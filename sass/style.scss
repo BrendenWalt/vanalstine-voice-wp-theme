@@ -493,7 +493,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   // Home page styles
   section.home {
 	align-items: center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-color: rgb(187, 213, 235);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -538,6 +538,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			margin: 0.5em 0.5em 0 0;
 		}
 	}
+	@media only screen and (max-width: $bp-med) {
+		background-position: 50% 50% !important;
+	}
 	@media only screen and (min-width: $bp-sm) {
 		p {
 			font-size: 1.75em;
@@ -547,6 +550,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 	}
 	@media only screen and (min-width: $bp-med){
+		background-attachment: fixed;
 	  min-height: 60vh;
 	  p {
 		line-height: 1.5em;
@@ -648,7 +652,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   
   // PHILOSOPHY
   section.philosophy {
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-color: #9EC2DF;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -670,6 +674,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			}
 		}
 		@media only screen and (min-width: $bp-med) {
+			background-attachment: fixed;
 			min-height: 55vh;
 			padding-bottom: 60px;
 			.text-container {

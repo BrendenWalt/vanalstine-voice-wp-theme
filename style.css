@@ -1113,7 +1113,7 @@ header .social {
 }
 section.home {
   align-items: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-color: #bbd5eb;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1158,6 +1158,11 @@ section.home .featured-testimonial .cite {
   font-weight: 400;
   margin: 0.5em 0.5em 0 0;
 }
+@media only screen and (max-width: 750px) {
+  section.home {
+    background-position: 50% 50% !important;
+  }
+}
 @media only screen and (min-width: 550px) {
   section.home p {
     font-size: 1.75em;
@@ -1168,6 +1173,7 @@ section.home .featured-testimonial .cite {
 }
 @media only screen and (min-width: 750px) {
   section.home {
+    background-attachment: fixed;
     min-height: 60vh;
   }
   section.home p {
@@ -1267,7 +1273,7 @@ section.voice-lessons .lessons-section .lesson span {
   }
 }
 section.philosophy {
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-color: #9ec2df;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1291,6 +1297,7 @@ section.philosophy .text-container p {
 }
 @media only screen and (min-width: 750px) {
   section.philosophy {
+    background-attachment: fixed;
     min-height: 55vh;
     padding-bottom: 60px;
   }
