@@ -50,8 +50,9 @@ $facebook_url                 = get_field('facebook_url');
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vanalstine-voice' ); ?></a>
+  <?php if(is_page_template('page-front.php')) {  ?>
 
-	<header>
+    <header>
       <a name="<?php echo $home_section_link_name;?>"></a>
       <div class="nav-container">
           
@@ -72,7 +73,7 @@ $facebook_url                 = get_field('facebook_url');
                   'menu-class'        => 'nav-links'
                 ))
               ?>
-		
+
             </div>
           </nav>
       </div>
@@ -89,5 +90,27 @@ $facebook_url                 = get_field('facebook_url');
         </a>
       </div>
     </header>
+
+  <?php } else { ?>
+
+    <header class="single-page-header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/vv-website-logo.png" alt="VanAlstine Voice">
+          </a>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+  <?php } ?>
 
 	<div id="content" class="site-content">
