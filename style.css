@@ -1131,10 +1131,14 @@ section.home .container {
   text-align: center;
   width: 92%;
 }
-section.home p {
+section.home h1 {
+  color: #676767;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-weight: 400;
   font-size: 1.5em;
   line-height: 1.25em;
   margin-bottom: 30px;
+  margin-top: 0;
   text-align: center;
 }
 section.home .featured-testimonial {
@@ -1164,7 +1168,7 @@ section.home .featured-testimonial .cite {
   }
 }
 @media only screen and (min-width: 550px) {
-  section.home p {
+  section.home h1 {
     font-size: 1.75em;
   }
   section.home .featured-testimonial blockquote {
@@ -1176,7 +1180,7 @@ section.home .featured-testimonial .cite {
     background-attachment: fixed;
     min-height: 60vh;
   }
-  section.home p {
+  section.home h1 {
     line-height: 1.5em;
   }
   section.home .container {
@@ -1220,7 +1224,7 @@ section.voice-lessons .lessons-section {
   background-size: cover;
   display: flex;
   height: auto;
-  padding: 25px 0;
+  padding: 28px 0 25px;
   margin: 45px 0;
 }
 section.voice-lessons .lessons-section .container {
@@ -1245,7 +1249,7 @@ section.voice-lessons .lessons-section .lesson {
   text-align: center;
   width: 90%;
 }
-section.voice-lessons .lessons-section .lesson span {
+section.voice-lessons .lessons-section .lesson h3 {
   display: table-cell;
   vertical-align: middle;
 }
@@ -1590,4 +1594,50 @@ footer .social.footer-social i:hover {
   footer .container {
     width: 85%;
   }
+}
+header.single-page-header {
+  background-color: #d4d4d4;
+  border-bottom: 8px solid #9ec2df;
+  position: relative;
+}
+header.single-page-header .container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+header.single-page-header .container div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+header.single-page-header .container div.logo {
+  margin: 0 auto;
+}
+header.single-page-header .container div.social {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+@media only screen and (min-width: 750px) {
+  header.single-page-header {
+    padding: 15px 5% 5px;
+  }
+  header.single-page-header .container div.logo {
+    margin-left: 0;
+  }
+  header.single-page-header .container div.social {
+    display: block;
+  }
+}
+footer .container div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+footer .container div:first-child {
+  margin-left: 0;
+  justify-content: flex-start;
+}
+footer .container div:last-child {
+  justify-content: flex-end;
 }

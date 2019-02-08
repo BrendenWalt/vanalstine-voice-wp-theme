@@ -80,7 +80,7 @@ $facebook_url                 = get_field('facebook_url');
       
       <div class="logo">
         <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/vv-website-logo.png" alt="VanAlstine Voice">
-      </div>
+                </div>
       <div class="social">
         <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
           <i class="fab fa-facebook-f"></i>

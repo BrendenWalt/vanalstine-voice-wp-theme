@@ -15,9 +15,11 @@ $facebook_url                 = get_field('facebook_url');
 	</div><!-- #content -->
 
 	<footer>
-    <div id="to-top">
-      <i class="fas fa-arrow-up"></i>
-    </div>
+    <?php if(is_page_template('page-front.php')) { ?>
+      <div id="to-top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    <?php } ?>
     <div class="container">
       <div class="footer-info">
         &copy;2019 VanAlstine Voice. All Rights Reserved

@@ -54,9 +54,9 @@ get_header();
 			
 			
 				<div class="container">
-				<p>
+				<h1>
           <?php echo $intro_text; ?>
-				</p>
+      </h1>
 				<a href="#<?php echo $contact_section_link_name ?>" class="button btn-primary">
 					<?php echo $home_button_text ?>
         </a>
@@ -123,7 +123,7 @@ get_header();
 
               while( $loop->have_posts() ) : $loop->the_post();
             ?>
-              <div class="lesson"><span><?php the_field(voice_category_name) ?></span></div>
+              <div class="lesson"><h3><?php the_field(voice_category_name) ?></h3></div>
             <?php endwhile; ?>
           </div>
         </div>

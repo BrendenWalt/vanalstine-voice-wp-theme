@@ -511,10 +511,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		text-align: center;
 	  width: 92%; 
 	}
-	p {
+	h1 {
+		color: #676767;
+		font-family: $standard;
+		font-weight: 400;
 	  font-size: 1.5em;
 	  line-height: 1.25em;
-	  margin-bottom: 30px;
+		margin-bottom: 30px;
+		margin-top: 0;
 	  text-align: center;
 	}
 	.featured-testimonial {
@@ -542,7 +546,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		background-position: 50% 50% !important;
 	}
 	@media only screen and (min-width: $bp-sm) {
-		p {
+		h1 {
 			font-size: 1.75em;
 		}
 		.featured-testimonial blockquote {
@@ -552,7 +556,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	@media only screen and (min-width: $bp-med){
 		background-attachment: fixed;
 	  min-height: 60vh;
-	  p {
+	  h1 {
 		line-height: 1.5em;
 		}
 		.container {
@@ -596,7 +600,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  background-size: cover;
 	  display: flex;
 	  height: auto;
-	  padding: 25px 0;
+	  padding: 28px 0 25px;
 	  margin: 45px 0;
 	  .container {
 		display: flex;
@@ -619,7 +623,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		text-transform: uppercase;
 		text-align: center;
 		width: 90%;
-		span {
+		h3 {
 		  display: table-cell;
 		  vertical-align: middle;
 		}
@@ -1000,4 +1004,56 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		width: 85%;
 	  }
 	}
-  }
+	}
+	
+
+
+	// SINGLE PAGE STYLES
+	header.single-page-header {
+		background-color: #d4d4d4;
+		border-bottom: 8px solid $color-primary;
+		position: relative;
+		
+		.container {
+			display: flex;
+			position: relative;
+			align-items: center;
+			div {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+			}
+			div.logo {
+				margin: 0 auto;
+			}
+			div.social {
+				display: none;
+				position: absolute;
+				right: 0;
+			}
+		}
+		@media only screen and (min-width: 750px) {
+			padding: 15px 5% 5px;
+			.container div.logo {
+				margin-left: 0;
+			}
+			.container div.social {
+				display: block;
+			}
+		}
+	}
+	footer .container {
+		div {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			&:first-child {
+				margin-left: 0;
+				justify-content: flex-start;
+			}
+			&:last-child {
+				justify-content: flex-end;
+			}
+		}
+		
+	}
