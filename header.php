@@ -88,6 +88,7 @@ $facebook_url                 = get_field('facebook_url');
         <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
+        
       </div>
     </header>
 
@@ -106,6 +107,9 @@ $facebook_url                 = get_field('facebook_url');
           </a>
           <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
             <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>

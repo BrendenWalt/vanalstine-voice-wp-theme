@@ -25,7 +25,7 @@ $facebook_url                 = get_field('facebook_url');
         &copy;2019 VanAlstine Voice. All Rights Reserved
       </div>
       <div class="contact-email">
-        <a href="mailto:contact@vanalstinevoice.com">contact@vanalstinevoice.com</a>
+        <a href="mailto:vanalstinevoice@gmail.com">vanalstinevoice@gmail.com</a>
       </div>
       <div class="footer-info footer-social social">
         <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
