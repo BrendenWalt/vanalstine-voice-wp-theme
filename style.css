@@ -1602,6 +1602,7 @@ header.single-page-header {
 }
 header.single-page-header .container {
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
 }
@@ -1612,22 +1613,33 @@ header.single-page-header .container div {
 }
 header.single-page-header .container div.logo {
   margin: 0 auto;
+  width: 85%;
 }
 header.single-page-header .container div.social {
-  display: none;
-  position: absolute;
+  padding-top: 10px;
   right: 0;
 }
 @media only screen and (min-width: 750px) {
   header.single-page-header {
     padding: 15px 5% 5px;
   }
+  header.single-page-header .container {
+    flex-direction: row;
+  }
   header.single-page-header .container div.logo {
     margin-left: 0;
+    width: auto;
+  }
+  header.single-page-header .container div.logo img {
+    width: 65%;
   }
   header.single-page-header .container div.social {
     display: block;
+    padding-top: 0;
   }
+}
+main.vv-single .page-content {
+  margin: 0 auto;
 }
 footer .container div {
   flex: 1;
