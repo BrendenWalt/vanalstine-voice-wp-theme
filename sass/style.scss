@@ -1005,6 +1005,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	  }
 	}
 	}
+
+	// CONTACT POPUP
+	.popmake-content {
+		input.wpcf7-form-control.wpcf7-text,
+		textarea.wpcf7-form-control {
+			width: 100%;
+		}
+	}
 	
 
 
