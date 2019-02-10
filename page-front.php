@@ -9,6 +9,9 @@ $home_button_text             = get_field('home_button_text');
 $home_background_image        = get_field('home_background_image');
 $home_section_link_name       = get_field('home_section_link_name');
 
+$promotional_section          = get_field('promotional_section');
+$promo_section_name           = get_field('promo_section_name');
+
 $services_section_title       = get_field('services_section_title');
 $services_text_block_1        = get_field('services_text_area_1');
 $services_text_block_2        = get_field('services_text_area_2');
@@ -37,7 +40,6 @@ $ig_feed_section_title        = get_field('ig_feed_section_title');
 $instagram_feed_shortcode     = get_field('instagram_feed_shortcode');
 $instagram_url                = get_field('instagram_url');
 $facebook_url                 = get_field('facebook_url');
-
 
 get_header();
 ?>
@@ -85,7 +87,20 @@ get_header();
         <?php endwhile; ?>
         
 				</div>
-			</section><!-- Home -->
+      </section><!-- Home -->
+      
+
+      <!-- Promo Section -->
+      <?php if($promotional_section) { ?>
+      <section class="promotional" id="<?php echo $promo_section_name; ?>">
+        <a name="<?php echo $lessons_section_link_name; ?>"></a>
+        <div class="container">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php the_content(); ?>
+        <?php endwhile; endif; ?>
+        </div>
+      </section><!-- Promo Section -->
+      <?php } ?>
 
       <!-- Voice Lessons -->
       <section class="voice-lessons" id="<?php echo $lessons_section_link_name; ?>">
@@ -259,10 +274,10 @@ get_header();
               <div></div>
             </div>
             <div class="social">
-              <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+              <a href="https://www.facebook.com/VanAlstineVoice/" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+              <a href="https://www.instagram.com/vanalstinevoice/" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>

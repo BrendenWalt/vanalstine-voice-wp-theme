@@ -1595,6 +1595,9 @@ footer .social.footer-social i:hover {
     width: 85%;
   }
 }
+.popmake-content input.wpcf7-form-control.wpcf7-text, .popmake-content textarea.wpcf7-form-control {
+  width: 100%;
+}
 header.single-page-header {
   background-color: #d4d4d4;
   border-bottom: 8px solid #9ec2df;

@@ -22,9 +22,10 @@ $(document).ready(function() {
 
     var onAnchorClick = function(e) {
       var location = this.hash;
-      if (location) {
+      if ((location) && (location.charAt(0) == '#')) {
+        console.log(location);
         locationName = "[name='" + this.hash.slice(1) + "']";
-
+        
         $("html, body").animate({
           scrollTop: $(locationName).offset().top-50
         }, 1000, "swing");
@@ -38,7 +39,7 @@ $(document).ready(function() {
     }
 
     var onEmptyClick = function(e) {
-      e.preventDefault();
+      // e.preventDefault();
       menuIcon.removeClass('open');
       menuList.removeClass('open');
     }
