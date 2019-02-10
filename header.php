@@ -10,8 +10,6 @@
  */
 
 $home_section_link_name     = get_field('home_section_link_name');
-$instagram_url                = get_field('instagram_url');
-$facebook_url                 = get_field('facebook_url');
 
 ?>
 <!doctype html>
@@ -102,10 +100,10 @@ $facebook_url                 = get_field('facebook_url');
           </a>
         </div>
         <div class="social">
-          <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+          <a href="https://www.facebook.com/VanAlstineVoice/" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+          <a href="https://www.instagram.com/vanalstinevoice/" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="#">

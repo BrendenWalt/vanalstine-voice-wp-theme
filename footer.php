@@ -8,8 +8,7 @@
  *
  * @package VanAsltine_Voice
  */
-$instagram_url                = get_field('instagram_url');
-$facebook_url                 = get_field('facebook_url');
+
 ?>
 
 	</div><!-- #content -->
@@ -28,10 +27,10 @@ $facebook_url                 = get_field('facebook_url');
         <a href="mailto:vanalstinevoice@gmail.com">vanalstinevoice@gmail.com</a>
       </div>
       <div class="footer-info footer-social social">
-        <a href="https://www.facebook.com/<?php echo $facebook_url; ?>" target="_blank">
+        <a href="https://www.facebook.com/VanAlstineVoice/" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.instagram.com/<?php echo $instagram_url; ?>" target="_blank">
+        <a href="https://www.instagram.com/vanalstinevoice/" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
