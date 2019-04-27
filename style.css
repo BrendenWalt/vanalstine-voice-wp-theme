@@ -1505,6 +1505,34 @@ section.contact .wpcf7-response-output {
     padding: 45px;
   }
 }
+.promo-banner {
+  background-color: #9ec2df;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+.promo-banner .banner-text, .promo-banner .banner-ctas {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+}
+.promo-banner h2 {
+  color: #fff;
+}
+.promo-banner .banner-ctas {
+  text-align: center;
+}
+.promo-banner .banner-ctas a {
+  text-align: center;
+}
+.promo-banner .banner-ctas .button.banner-cta {
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: 11px 58px;
+}
 #to-top {
   position: fixed;
   right: 3%;
@@ -1517,6 +1545,7 @@ section.contact .wpcf7-response-output {
   -webkit-box-shadow: 2px 3px 0px 0px #f3ca40;
   -moz-box-shadow: 2px 3px 0px 0px #f3ca40;
   box-shadow: 2px 3px 0px 0px #f3ca40;
+  z-index: 15;
 }
 #to-top i {
   color: #fff;

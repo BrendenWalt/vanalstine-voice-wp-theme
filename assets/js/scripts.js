@@ -23,7 +23,6 @@ $(document).ready(function() {
     var onAnchorClick = function(e) {
       var location = this.hash;
       if ((location) && (location.charAt(0) == '#')) {
-        console.log(location);
         locationName = "[name='" + this.hash.slice(1) + "']";
         
         $("html, body").animate({

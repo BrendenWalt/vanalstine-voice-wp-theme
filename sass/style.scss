@@ -815,9 +815,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .social-feed {
 	text-align: center;
 	padding-top: 30px;
-	h2 {
-	  
-	}
 	.instagram-feed {
 		.sb_instagram_header,
 		#sbi_load {
@@ -913,6 +910,40 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			}
 		}
 	}
+
+	// Promo Banner
+	.promo-banner {
+		background-color: #9ec2df;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50% !important;
+		position: fixed;
+		bottom:0;
+		width: 100%;
+		padding: 20px;
+		.banner-text,
+		.banner-ctas {
+			display: inline-block;
+			width: 48%;
+			vertical-align: middle;
+		}
+		h2 {
+			color: #ffffff;
+		}
+		.banner-ctas {
+			text-align: center;
+			a {
+				text-align: center;
+			}
+			.button.banner-cta {
+				border: 3px solid #ffffff;
+				background-color: transparent;
+				color: #ffffff;
+				font-weight: 600;
+				padding: 11px 58px;
+			}
+		}
+	}
   
   // To Top
   #to-top {
@@ -927,6 +958,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	-webkit-box-shadow: 2px 3px 0px 0px $color-secondary;
 	-moz-box-shadow: 2px 3px 0px 0px $color-secondary;
 	box-shadow: 2px 3px 0px 0px $color-secondary;
+	z-index: 15;
 	i {
 	  color: #ffffff;
 	  display: block;

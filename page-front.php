@@ -12,6 +12,19 @@ $home_section_link_name       = get_field('home_section_link_name');
 $promotional_section          = get_field('promotional_section');
 $promo_section_name           = get_field('promo_section_name');
 
+$activate_promo_banner        = get_field('activate_promo_banner');
+$promo_banner_headline        = get_field('promo_banner_headline');
+$promo_banner_copy_block      = get_field('promo_banner_copy_block');
+$banner_button_1_text         = get_field('banner_button_1_text');
+$banner_button_1_link         = get_field('banner_button_1_link');
+$activate_button_2            = get_field('activate_button_2');
+$banner_button_1_text         = get_field('banner_button_1_text');
+$banner_button_2_text_copy    = get_field('banner_button_2_text');
+$banner_button_2_link_copy    = get_field('banner_button_2_link');
+$banner_logo_image            = get_field('banner_logo_image');
+$banner_background_image      = get_field('banner_background_image');
+$banner_background_color      = get_field('banner_background_color');
+
 $services_section_title       = get_field('services_section_title');
 $services_text_block_1        = get_field('services_text_area_1');
 $services_text_block_2        = get_field('services_text_area_2');
@@ -88,6 +101,8 @@ get_header();
         
 				</div>
       </section><!-- Home -->
+
+      
       
 
       <!-- Promo Section -->
@@ -287,6 +302,42 @@ get_header();
           </div>
         </div>
       </section><!-- Contact -->
+
+      <?php if($activate_promo_banner) { ?>
+
+      <?php if ( !empty($banner_background_image)) { ?>
+        <section class="promo-banner" id="current-promo" style="background-image('<?php echo $banner_background_image['url']; ?>'); background-color: <?php echo $banner_background_color; ?>;" >
+      <? } else { ?>
+      <section class="promo-banner" id="current-promo" style="background-color: <?php echo $banner_background_color; ?>;">
+      <? } ?>
+        <div class="container">
+          <?php if ( !empty($banner_logo_image)) { ?>
+            <div class="banner-image">
+              <img src="<?php echo $banner_logo_image['url']; ?>" alt="<?php echo $banner_logo_image['alt'];?>">
+            </div>
+          <? } ?>
+          <div class="banner-text">
+            <h2>
+              <?php echo $promo_banner_headline; ?>
+            </h2>
+            <p>
+              <?php echo $promo_banner_copy_block; ?>
+            </p>
+          </div>
+          <div class="banner-ctas">
+            <a href="<?php echo $banner_button_1_link; ?>" class="button banner-cta" target="_blank">
+              <?php echo $banner_button_1_text; ?>
+            </a>
+            <?php if($activate_button_2) { ?>
+              <a href="<?php echo $banner_button_2_link; ?>" target="_blank">
+                <?php echo $banner_button_2_text; ?>
+              </a>
+            <?php } ?>
+          </div>
+        </div>
+      </section>
+        
+      <?php } ?>
 
 
 
