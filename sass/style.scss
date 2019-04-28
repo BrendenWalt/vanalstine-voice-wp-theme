@@ -920,15 +920,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		position: fixed;
 		bottom:0;
 		width: 100%;
-		padding: 0.6rem 0;;
-		z-index: 2;
+		padding: 0.6rem 0 1.25rem;
+		z-index: 5;
 		.container {
 			position: relative;
 		}
 		.banner-text,
 		.banner-ctas {
 			vertical-align: middle;
-			@media screen and (min-width: $bp-med) {
+			@media screen and (min-width: $bp-lrg) {
 				display: inline-block;
 				width: 48%;
 			}
@@ -936,14 +936,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		h2 {
 			color: #ffffff;
 			text-align: center;
-			@media only screen and (min-width: $bp-med) {
+			@media only screen and (min-width: $bp-lrg) {
 				text-align: left;
 			}
 		}
 		p {
 			color: #ffffff;
 			text-align: center;
-			@media only screen and (min-width: $bp-med) {
+			@media only screen and (min-width: $bp-lrg) {
 				text-align: left;
 			}
 		}
@@ -953,9 +953,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				text-align: center;
 				margin: 10px 0px 0;
 				width: 95%;
-				@media only screen and (min-width: $bp-med) {
+				max-width: 300px;
+				@media only screen and (min-width: $bp-lrg) {
 					margin: 0 10px;
-					width: 46%;
+					width: 44%;
 				}
 			}
 			.button.banner-cta {
@@ -963,7 +964,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				background-color: transparent;
 				color: #ffffff;
 				font-weight: 600;
-				padding: 7px 58px;
+				padding: 7px 0px;
 			}
 		}
 		.banner-image {
@@ -987,8 +988,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			font-family: $standard;
 			font-size: 1.5em;
 			position: absolute;
-			top:0;
-			right:0;
+			top:1rem;
+			left:5%;
+			z-index: 5;
 			&:hover {
 				cursor: pointer;
 			}
@@ -1008,7 +1010,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	-webkit-box-shadow: 2px 3px 0px 0px $color-secondary;
 	-moz-box-shadow: 2px 3px 0px 0px $color-secondary;
 	box-shadow: 2px 3px 0px 0px $color-secondary;
-	z-index: 15;
+	z-index: 4;
+	@media only screen and (min-width: $bp-med) {
+		z-index: 15;
+	}
+	
 	i {
 	  color: #ffffff;
 	  display: block;
