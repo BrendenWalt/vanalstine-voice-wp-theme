@@ -1507,31 +1507,92 @@ section.contact .wpcf7-response-output {
 }
 .promo-banner {
   background-color: #9ec2df;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50% !important;
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 0.6rem 0;
+  z-index: 2;
+}
+.promo-banner .container {
+  position: relative;
 }
 .promo-banner .banner-text, .promo-banner .banner-ctas {
-  display: inline-block;
-  width: 48%;
   vertical-align: middle;
+}
+@media screen and (min-width: 750px) {
+  .promo-banner .banner-text, .promo-banner .banner-ctas {
+    display: inline-block;
+    width: 48%;
+  }
 }
 .promo-banner h2 {
   color: #fff;
+  text-align: center;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner h2 {
+    text-align: left;
+  }
+}
+.promo-banner p {
+  color: #fff;
+  text-align: center;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner p {
+    text-align: left;
+  }
 }
 .promo-banner .banner-ctas {
   text-align: center;
 }
 .promo-banner .banner-ctas a {
   text-align: center;
+  margin: 10px 0px 0;
+  width: 95%;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner .banner-ctas a {
+    margin: 0 10px;
+    width: 46%;
+  }
 }
 .promo-banner .banner-ctas .button.banner-cta {
   border: 3px solid #fff;
   background-color: transparent;
   color: #fff;
   font-weight: 600;
-  padding: 11px 58px;
+  padding: 7px 58px;
+}
+.promo-banner .banner-image {
+  margin: 0 auto 0.5rem;
+}
+.promo-banner .banner-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+  max-height: 100px;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner .banner-text {
+    padding-right: 1rem;
+  }
+}
+.promo-banner .close-banner {
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.promo-banner .close-banner:hover {
+  cursor: pointer;
 }
 #to-top {
   position: fixed;

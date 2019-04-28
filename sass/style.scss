@@ -920,27 +920,77 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		position: fixed;
 		bottom:0;
 		width: 100%;
-		padding: 20px;
+		padding: 0.6rem 0;;
+		z-index: 2;
+		.container {
+			position: relative;
+		}
 		.banner-text,
 		.banner-ctas {
-			display: inline-block;
-			width: 48%;
 			vertical-align: middle;
+			@media screen and (min-width: $bp-med) {
+				display: inline-block;
+				width: 48%;
+			}
 		}
 		h2 {
 			color: #ffffff;
+			text-align: center;
+			@media only screen and (min-width: $bp-med) {
+				text-align: left;
+			}
+		}
+		p {
+			color: #ffffff;
+			text-align: center;
+			@media only screen and (min-width: $bp-med) {
+				text-align: left;
+			}
 		}
 		.banner-ctas {
 			text-align: center;
 			a {
 				text-align: center;
+				margin: 10px 0px 0;
+				width: 95%;
+				@media only screen and (min-width: $bp-med) {
+					margin: 0 10px;
+					width: 46%;
+				}
 			}
 			.button.banner-cta {
 				border: 3px solid #ffffff;
 				background-color: transparent;
 				color: #ffffff;
 				font-weight: 600;
-				padding: 11px 58px;
+				padding: 7px 58px;
+			}
+		}
+		.banner-image {
+			margin: 0 auto 0.5rem;
+			img {
+				display: block;
+				margin: 0 auto;
+				max-width: 180px;
+				max-height: 100px;
+			}
+		}
+		.banner-text {
+			@media only screen and (min-width: $bp-med) {
+				padding-right: 1rem;
+			}
+		}
+		.close-banner {
+			color: #ffffff;
+			display: inline-block;
+			font-weight: bold;
+			font-family: $standard;
+			font-size: 1.5em;
+			position: absolute;
+			top:0;
+			right:0;
+			&:hover {
+				cursor: pointer;
 			}
 		}
 	}

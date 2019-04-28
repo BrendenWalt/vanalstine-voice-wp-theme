@@ -19,8 +19,8 @@ $banner_button_1_text         = get_field('banner_button_1_text');
 $banner_button_1_link         = get_field('banner_button_1_link');
 $activate_button_2            = get_field('activate_button_2');
 $banner_button_1_text         = get_field('banner_button_1_text');
-$banner_button_2_text_copy    = get_field('banner_button_2_text');
-$banner_button_2_link_copy    = get_field('banner_button_2_link');
+$banner_button_2_text         = get_field('banner_button_2_text');
+$banner_button_2_link         = get_field('banner_button_2_link');
 $banner_logo_image            = get_field('banner_logo_image');
 $banner_background_image      = get_field('banner_background_image');
 $banner_background_color      = get_field('banner_background_color');
@@ -306,11 +306,12 @@ get_header();
       <?php if($activate_promo_banner) { ?>
 
       <?php if ( !empty($banner_background_image)) { ?>
-        <section class="promo-banner" id="current-promo" style="background-image('<?php echo $banner_background_image['url']; ?>'); background-color: <?php echo $banner_background_color; ?>;" >
+        <section class="promo-banner" id="current-promo" background="<?php echo $banner_background_image['url']; ?>" style="background-image: url('<?php echo $banner_background_image['url']; ?>'); background-color: <?php echo $banner_background_color; ?>;" >
       <? } else { ?>
       <section class="promo-banner" id="current-promo" style="background-color: <?php echo $banner_background_color; ?>;">
       <? } ?>
         <div class="container">
+          <div class="close-banner">X</div>
           <?php if ( !empty($banner_logo_image)) { ?>
             <div class="banner-image">
               <img src="<?php echo $banner_logo_image['url']; ?>" alt="<?php echo $banner_logo_image['alt'];?>">
@@ -325,11 +326,11 @@ get_header();
             </p>
           </div>
           <div class="banner-ctas">
-            <a href="<?php echo $banner_button_1_link; ?>" class="button banner-cta" target="_blank">
+            <a href="<?php echo $banner_button_1_link; ?>" class="button banner-cta" target="_blank" style="background-color: <?php echo $banner_background_color; ?>;">
               <?php echo $banner_button_1_text; ?>
             </a>
             <?php if($activate_button_2) { ?>
-              <a href="<?php echo $banner_button_2_link; ?>" target="_blank">
+              <a href="<?php echo $banner_button_2_link; ?>" class="button banner-cta" target="_blank" style="background-color: <?php echo $banner_background_color; ?>;">
                 <?php echo $banner_button_2_text; ?>
               </a>
             <?php } ?>
