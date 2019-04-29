@@ -38,8 +38,7 @@ $(document).ready(function() {
       menuList.toggleClass('open');
     }
 
-    onCloseBannerClick = function(e) {
-      e.preventDefault();
+    var onCloseBannerClick = function() {
       $('#current-promo').fadeOut(300);
     }
 
