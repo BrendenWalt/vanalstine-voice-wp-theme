@@ -936,6 +936,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		h2 {
 			color: #ffffff;
 			text-align: center;
+			font-size: 1.8vw;
 			@media only screen and (min-width: $bp-lrg) {
 				text-align: left;
 			}
@@ -999,34 +1000,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   
   // To Top
   #to-top {
-	position: fixed;
-	right: 3%;
-	background-color: $color-primary;
-	border-radius: 8px;
-	display: none;
-	bottom: 78px;
-	height: 50px;
-	width: 50px;
-	-webkit-box-shadow: 2px 3px 0px 0px $color-secondary;
-	-moz-box-shadow: 2px 3px 0px 0px $color-secondary;
-	box-shadow: 2px 3px 0px 0px $color-secondary;
-	z-index: 4;
-	@media only screen and (min-width: $bp-med) {
-		z-index: 15;
-	}
-	
-	i {
-	  color: #ffffff;
-	  display: block;
-	  font-size: 25px;
-		padding: 12px 15px;
-		&:hover {
-			cursor: pointer;
+		position: fixed;
+		right: 3%;
+		background-color: $color-primary;
+		border-radius: 8px;
+		display: none;
+		bottom: 78px;
+		height: 50px;
+		width: 50px;
+		-webkit-box-shadow: 2px 3px 0px 0px $color-secondary;
+		-moz-box-shadow: 2px 3px 0px 0px $color-secondary;
+		box-shadow: 2px 3px 0px 0px $color-secondary;
+		z-index: 4;
+		i {
+			color: #ffffff;
+			display: block;
+			font-size: 25px;
+			padding: 12px 15px;
+			&:hover {
+				cursor: pointer;
+			}
 		}
-	}
-	@media only screen and (min-width: $bp-med) {
-	  bottom: 28px;
-	}
+		@media only screen and (min-width: $bp-med) {
+			bottom: 28px;
+			z-index: 15;
+		}
   }
   
   // FOOTER

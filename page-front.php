@@ -94,8 +94,8 @@ get_header();
         ?>
           <div class="featured-testimonial">
             <blockquote>
-              <?php the_field(testimonial) ?>
-              <p class="cite">- <?php the_field(testimonial_contributor) ?></p>
+              <?php the_field('testimonial') ?>
+              <p class="cite">- <?php the_field('testimonial_contributor') ?></p>
             </blockquote>
           </div>
         <?php endwhile; ?>
@@ -154,7 +154,7 @@ get_header();
 
               while( $loop->have_posts() ) : $loop->the_post();
             ?>
-              <div class="lesson"><h3><?php the_field(voice_category_name) ?></h3></div>
+              <div class="lesson"><h3><?php the_field('voice_category_name') ?></h3></div>
             <?php endwhile; ?>
           </div>
         </div>
@@ -221,8 +221,8 @@ get_header();
           ?>
             <div class="testimonial-container">
               <blockquote>
-                <span class="quotation-mark"></span><?php the_field(testimonial) ?><span class="quotation-mark"></span>
-                <p class="cite">- <?php the_field(testimonial_contributor) ?></p>
+                <span class="quotation-mark"></span><?php the_field('testimonial') ?><span class="quotation-mark"></span>
+                <p class="cite">- <?php the_field('testimonial_contributor') ?></p>
               </blockquote>
             </div>
           <?php endwhile; ?>
@@ -304,13 +304,13 @@ get_header();
         </div>
       </section><!-- Contact -->
 
-      <?php if($activate_promo_banner) { ?>
-
-      <?php if ( !empty($banner_background_image)) { ?>
+      <!-- Promo Banner -->
+      <?php if($activate_promo_banner): ?>
+          <?php if ( !empty($banner_background_image)) { ?>
         <section class="promo-banner" id="current-promo" background="<?php echo $banner_background_image['url']; ?>" style="background-image: url('<?php echo $banner_background_image['url']; ?>'); background-color: <?php echo $banner_background_color; ?>;" >
-      <? } else { ?>
+      <?php } else { ?>
       <section class="promo-banner" id="current-promo" style="background-color: <?php echo $banner_background_color; ?>;">
-      <? } ?>
+      <?php } ?>
         <div class="close-banner" style="color: <?php echo $banner_content_color; ?>">X</div>
         <div class="container">
           
@@ -318,7 +318,7 @@ get_header();
             <div class="banner-image">
               <img src="<?php echo $banner_logo_image['url']; ?>" alt="<?php echo $banner_logo_image['alt'];?>">
             </div>
-          <? } ?>
+          <?php } ?>
           <div class="banner-text">
             <h2 style="color: <?php echo $banner_content_color; ?>">
               <?php echo $promo_banner_headline; ?>
@@ -339,8 +339,8 @@ get_header();
           </div>
         </div>
       </section>
-        
-      <?php } ?>
+          
+      <?php endif; ?>
 
 
 

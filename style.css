@@ -1531,6 +1531,7 @@ section.contact .wpcf7-response-output {
 .promo-banner h2 {
   color: #fff;
   text-align: center;
+  font-size: 1.8vw;
 }
 @media only screen and (min-width: 1000px) {
   .promo-banner h2 {
@@ -1610,11 +1611,6 @@ section.contact .wpcf7-response-output {
   box-shadow: 2px 3px 0px 0px #f3ca40;
   z-index: 4;
 }
-@media only screen and (min-width: 750px) {
-  #to-top {
-    z-index: 15;
-  }
-}
 #to-top i {
   color: #fff;
   display: block;
@@ -1627,6 +1623,7 @@ section.contact .wpcf7-response-output {
 @media only screen and (min-width: 750px) {
   #to-top {
     bottom: 28px;
+    z-index: 15;
   }
 }
 footer {
