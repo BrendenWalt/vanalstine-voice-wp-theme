@@ -1531,7 +1531,14 @@ section.contact .wpcf7-response-output {
 .promo-banner h2 {
   color: #fff;
   text-align: center;
-  font-size: 1.8vw;
+  font-size: 7vw;
+  line-height: 105%;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner h2 {
+    font-size: 42px;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .promo-banner h2 {
@@ -1590,12 +1597,18 @@ section.contact .wpcf7-response-output {
   font-family: 'Nunito', Arial, sans-serif;
   font-size: 1.5em;
   position: absolute;
-  top: 1rem;
-  left: 5%;
+  top: 0.1rem;
+  left: 2%;
   z-index: 5;
 }
 .promo-banner .close-banner:hover {
   cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .promo-banner .close-banner {
+    left: 3%;
+    top: 1rem;
+  }
 }
 #to-top {
   position: fixed;

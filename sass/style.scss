@@ -936,7 +936,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		h2 {
 			color: #ffffff;
 			text-align: center;
-			font-size: 1.8vw;
+			font-size: 7vw;
+			line-height: 105%;
+			margin-bottom: 10px;
+			@media only screen and (min-width: $bp-med) {
+				font-size: 42px;
+			}
 			@media only screen and (min-width: $bp-lrg) {
 				text-align: left;
 			}
@@ -989,11 +994,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			font-family: $standard;
 			font-size: 1.5em;
 			position: absolute;
-			top:1rem;
-			left:5%;
+			top:0.1rem;
+			left:2%;
 			z-index: 5;
 			&:hover {
 				cursor: pointer;
+			}
+			@media only screen and (min-width: $bp-lrg) {
+				left: 3%;
+				top:1rem;
 			}
 		}
 	}
