@@ -1081,16 +1081,30 @@ header .social {
   display: none;
   text-align: right;
 }
+header .social .student-login {
+  border: 3px solid #9ec2df;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0.4em 2.25em;
+  margin-right: 1em;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+header .social .student-login:hover {
+  background-color: rgba(158, 194, 223, 0.4);
+}
+header .nav-container, header .social {
+  width: 15%;
+}
 @media only screen and (min-width: 550px) {
   header .logo {
     min-width: 250px;
     width: 50%;
   }
-  header .nav-container, header .social {
-    width: 100px;
-  }
   header .social {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 750px) {

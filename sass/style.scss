@@ -456,18 +456,33 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		.social {
 			display: none;
 			text-align: right;
+			.student-login {
+				border: 3px solid $color-primary;
+				border-radius: 10px;
+				display: inline-block;
+				font-family: $standard;
+				padding: 0.4em 2.25em;
+				margin-right: 1em;
+				margin-bottom: 5px;
+				transition: all 0.3s ease;
+			}
+			.student-login:hover {	
+				background-color: rgba(158, 194, 223, 0.4);
+			}
+		}
+		.nav-container,
+		.social {
+			width: 15%;
 		}
 		@media only screen and (min-width: $bp-sm) {
 			.logo {
 				min-width: 250px;
 				width: 50%;
 			}
-			.nav-container,
 			.social {
-				width: 100px;
-			}
-			.social {
-				display: block;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
 			}
 		}
 		@media only screen and (min-width: $bp-med) {
