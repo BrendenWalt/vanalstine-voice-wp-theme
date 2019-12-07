@@ -1060,9 +1060,9 @@ a.button {
 header {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  padding: 25px 3% 10px;
+  padding: 8px 3% 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1078,23 +1078,26 @@ header .logo {
   width: 65%;
 }
 header .social {
-  display: none;
+  display: block;
   text-align: right;
+  width: 100%;
 }
 header .social .student-login {
+  background-color: #9ec2df;
   border: 3px solid #9ec2df;
   border-radius: 10px;
   display: inline-block;
-  padding: 0.4em 2.25em;
-  margin-right: 1em;
+  font-family: 'Nunito', Arial, sans-serif;
+  padding: 0.1em 1.25em;
+  margin-right: 0em;
   margin-bottom: 5px;
   transition: all 0.3s ease;
 }
 header .social .student-login:hover {
   background-color: rgba(158, 194, 223, 0.4);
 }
-header .nav-container, header .social {
-  width: 15%;
+header .social i {
+  display: none;
 }
 @media only screen and (min-width: 550px) {
   header .logo {
@@ -1103,8 +1106,19 @@ header .nav-container, header .social {
   }
   header .social {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+  }
+  header .social i {
+    display: block;
+  }
+  header .social .student-login {
+    background-color: transparent;
+    padding: 0.4em 2.25em;
+    margin-right: 1em;
+  }
+  header .nav-container, header .social {
+    width: 15%;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -1113,6 +1127,12 @@ header .nav-container, header .social {
   }
   header .logo {
     width: 30%;
+  }
+}
+@media only screen and (min-width: 550px) {
+  header {
+    flex-direction: row;
+    padding-top: 25px;
   }
 }
 .social i {
