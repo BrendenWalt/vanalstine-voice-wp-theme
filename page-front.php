@@ -242,7 +242,7 @@ get_header();
       </section><!-- About -->
 
       <!-- Instagram Feed -->
-      <section class="social-feed" id="follow-on-instagram">
+      <!-- <section class="social-feed" id="follow-on-instagram">
         <h2>
           <?php echo $ig_feed_section_title; ?>
         </h2>
@@ -256,7 +256,8 @@ get_header();
         <div class="instagram-feed">
           <?php echo do_shortcode($instagram_feed_shortcode); ?>
         </div>
-      </section><!-- Instagram Feed -->
+      </section> -->
+      <!-- Instagram Feed -->
 
       <!-- Contact -->
       <section class="contact" id="<?php echo $contact_section_link_name ?>">
