@@ -16,14 +16,8 @@ $home_section_link_name     = get_field('home_section_link_name');
 <html <?php language_attributes(); ?>>
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131562241-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-131562241-1');
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134190538-1"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-134190538-1'); </script>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,6 +74,7 @@ $home_section_link_name     = get_field('home_section_link_name');
         <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/vv-website-logo.png" alt="VanAlstine Voice">
                 </div>
       <div class="social">
+        <a href="#" class="student-login">Login</a>
         <a href="https://www.facebook.com/VanAlstineVoice/" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
@@ -100,6 +95,7 @@ $home_section_link_name     = get_field('home_section_link_name');
           </a>
         </div>
         <div class="social">
+         <a href="#" class="student-login">Login</a>
           <a href="https://www.facebook.com/VanAlstineVoice/" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>

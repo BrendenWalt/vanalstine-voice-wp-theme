@@ -1060,9 +1060,9 @@ a.button {
 header {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  padding: 25px 3% 10px;
+  padding: 8px 3% 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1078,19 +1078,47 @@ header .logo {
   width: 65%;
 }
 header .social {
-  display: none;
+  display: block;
   text-align: right;
+  width: 100%;
+}
+header .social .student-login {
+  background-color: #9ec2df;
+  border: 3px solid #9ec2df;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: 'Nunito', Arial, sans-serif;
+  padding: 0.1em 1.25em;
+  margin-right: 0em;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+header .social .student-login:hover {
+  background-color: rgba(158, 194, 223, 0.4);
+}
+header .social i {
+  display: none;
 }
 @media only screen and (min-width: 550px) {
   header .logo {
     min-width: 250px;
     width: 50%;
   }
-  header .nav-container, header .social {
-    width: 100px;
-  }
   header .social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header .social i {
     display: block;
+  }
+  header .social .student-login {
+    background-color: transparent;
+    padding: 0.4em 2.25em;
+    margin-right: 1em;
+  }
+  header .nav-container, header .social {
+    width: 15%;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -1099,6 +1127,12 @@ header .social {
   }
   header .logo {
     width: 30%;
+  }
+}
+@media only screen and (min-width: 550px) {
+  header {
+    flex-direction: row;
+    padding-top: 25px;
   }
 }
 .social i {
@@ -1505,6 +1539,111 @@ section.contact .wpcf7-response-output {
     padding: 45px;
   }
 }
+.promo-banner {
+  background-color: #9ec2df;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50% !important;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.6rem 0 1.25rem;
+  z-index: 5;
+}
+.promo-banner .container {
+  position: relative;
+}
+.promo-banner .banner-text, .promo-banner .banner-ctas {
+  vertical-align: middle;
+}
+@media screen and (min-width: 1000px) {
+  .promo-banner .banner-text, .promo-banner .banner-ctas {
+    display: inline-block;
+    width: 48%;
+  }
+}
+.promo-banner h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 7vw;
+  line-height: 105%;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner h2 {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .promo-banner h2 {
+    text-align: left;
+  }
+}
+.promo-banner p {
+  color: #fff;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  .promo-banner p {
+    text-align: left;
+  }
+}
+.promo-banner .banner-ctas {
+  text-align: center;
+}
+.promo-banner .banner-ctas a {
+  text-align: center;
+  margin: 10px 0px 0;
+  width: 95%;
+  max-width: 300px;
+}
+@media only screen and (min-width: 1000px) {
+  .promo-banner .banner-ctas a {
+    margin: 0 10px;
+    width: 44%;
+  }
+}
+.promo-banner .banner-ctas .button.banner-cta {
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: 7px 0px;
+}
+.promo-banner .banner-image {
+  margin: 0 auto 0.5rem;
+}
+.promo-banner .banner-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  max-height: 100px;
+}
+@media only screen and (min-width: 750px) {
+  .promo-banner .banner-text {
+    padding-right: 1rem;
+  }
+}
+.promo-banner .close-banner {
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0.1rem;
+  left: 2%;
+  z-index: 5;
+}
+.promo-banner .close-banner:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .promo-banner .close-banner {
+    left: 3%;
+    top: 1rem;
+  }
+}
 #to-top {
   position: fixed;
   right: 3%;
@@ -1517,6 +1656,7 @@ section.contact .wpcf7-response-output {
   -webkit-box-shadow: 2px 3px 0px 0px #f3ca40;
   -moz-box-shadow: 2px 3px 0px 0px #f3ca40;
   box-shadow: 2px 3px 0px 0px #f3ca40;
+  z-index: 4;
 }
 #to-top i {
   color: #fff;
@@ -1530,6 +1670,7 @@ section.contact .wpcf7-response-output {
 @media only screen and (min-width: 750px) {
   #to-top {
     bottom: 28px;
+    z-index: 15;
   }
 }
 footer {

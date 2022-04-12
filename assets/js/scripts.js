@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     var menuIcon = $('.nav-burger');
     var burgerPatties = $('.nav-burger span');
+    var closeBanner= $('.close-banner');
     var menuList = $('.menu-main-menu-container');
     var toTop = $('#to-top');
     var menuLink = $('.menu-item a');
@@ -23,7 +24,6 @@ $(document).ready(function() {
     var onAnchorClick = function(e) {
       var location = this.hash;
       if ((location) && (location.charAt(0) == '#')) {
-        console.log(location);
         locationName = "[name='" + this.hash.slice(1) + "']";
         
         $("html, body").animate({
@@ -36,6 +36,10 @@ $(document).ready(function() {
       }
       menuIcon.toggleClass('open');
       menuList.toggleClass('open');
+    }
+
+    var onCloseBannerClick = function() {
+      $('#current-promo').fadeOut(300);
     }
 
     var onEmptyClick = function(e) {
@@ -84,6 +88,7 @@ $(document).ready(function() {
       })
     }
     
+  closeBanner.on('click', onCloseBannerClick);
   menuIcon.on('click', onMenuClick);
   toTop.on('click', onToTopClick);
   menuLink.on('click', onAnchorClick);
